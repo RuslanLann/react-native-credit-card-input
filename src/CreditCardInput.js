@@ -161,17 +161,16 @@ export default class CreditCardInput extends Component {
           expiry={expiry}
           cvc={cvc} />
         <ScrollView ref="Form"
-          horizontal
           keyboardShouldPersistTaps="always"
           scrollEnabled={allowScroll}
           showsHorizontalScrollIndicator={false}
           style={s.form}>
           <CCInput {...this._inputProps("number")}
             keyboardType="numeric"
-            containerStyle={[s.inputContainer, inputContainerStyle, { width: CARD_NUMBER_INPUT_WIDTH }]} />
+            containerStyle={[s.inputContainer, inputContainerStyle, { width: 300 }]} />
           <CCInput {...this._inputProps("expiry")}
             keyboardType="numeric"
-            containerStyle={[s.inputContainer, inputContainerStyle, { width: EXPIRY_INPUT_WIDTH }]} />
+            containerStyle={[s.inputContainer, inputContainerStyle, { width: 110 }]} />
           { requiresCVC &&
             <CCInput {...this._inputProps("cvc")}
               keyboardType="numeric"
