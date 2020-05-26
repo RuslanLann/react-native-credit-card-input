@@ -164,21 +164,21 @@ export default class CreditCardInput extends Component {
           showsVerticalScrollIndicator={false}
           style={s.form}>
           <CCInput {...this._inputProps("number")}
-            keyboardType="numeric"
+            keyboardType="phone-pad"
             containerStyle={[s.inputContainer, inputContainerStyle, { width: 300 }]} />
           <CCInput {...this._inputProps("expiry")}
-            keyboardType="numeric"
+            keyboardType="phone-pad"
             containerStyle={[s.inputContainer, inputContainerStyle, { width: 110 }]} />
           { requiresCVC &&
             <CCInput {...this._inputProps("cvc")}
-              keyboardType="numeric"
+              keyboardType="phone-pad"
               containerStyle={[s.inputContainer, inputContainerStyle, { width: CVC_INPUT_WIDTH }]} /> }
           { requiresName &&
             <CCInput {...this._inputProps("name")}
               containerStyle={[s.inputContainer, inputContainerStyle, { width: NAME_INPUT_WIDTH }]} /> }
           { requiresPostalCode &&
             <CCInput {...this._inputProps("postalCode")}
-              keyboardType="numeric"
+              keyboardType="phone-pad"
               containerStyle={[s.inputContainer, inputContainerStyle, { width: POSTAL_CODE_INPUT_WIDTH }]} /> }
         </ScrollView>
       </View>
